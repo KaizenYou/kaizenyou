@@ -9,25 +9,25 @@ const navItems = [
     {
         name: "Home",
         link: "/",
-        icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+        icon: <IconHome className="h-4 w-4 text-white" />,
     },
     {
         name: "Dashboard",
         link: "/dashboard",
-        icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+        icon: <IconUser className="h-4 w-4 text-white" />,
     },
     {
         name: "Events",
         link: "/events",
         icon: (
-            <IconCalendarEvent className="h-4 w-4 text-neutral-500 dark:text-white" />
+            <IconCalendarEvent className="h-4 w-4 text-white" />
         ),
     },
     {
         name: "Internships",
         link: "/internships",
         icon: (
-            <IconBriefcase className="h-4 w-4 text-neutral-500 dark:text-white" />
+            <IconBriefcase className="h-4 w-4 text-white" />
         ),
     },
 ];

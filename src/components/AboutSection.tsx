@@ -3,8 +3,8 @@
 
 const AboutSection = () => {
     return (
-        <div className="min-h-[50rem] w-full flex flex-col items-center justify-center antialiased snap-start bg-dot-white/[0.2] bg-black relative">
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <div className="min-h-[75vh] w-full flex flex-col items-center justify-center antialiased snap-center bg-dot-white/[0.2] bg-black relative">
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_30%,black)]"></div>
             <h1 className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-5xl font-medium tracking-tight text-transparent md:text-7xl relative z-20">
                 Who are We?
             </h1>

@@ -4,13 +4,11 @@ import { Label } from "../../components/ui/label";
 import { Input } from "../../components/ui/input";
 import { cn } from "@/utils/cn";
 import {
-    IconBrandGithub,
     IconBrandGoogle,
-    IconBrandOnlyfans,
 } from "@tabler/icons-react";
 import Link from "next/link";
 
-const page = () => {
+const Login = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log("Form submitted");
@@ -76,7 +74,7 @@ const BottomGradient = () => {
     );
 };
 
-export default page
+export default Login
 
 const LabelInputContainer = ({
     children,

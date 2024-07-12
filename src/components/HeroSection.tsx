@@ -2,7 +2,7 @@ import GlobeSection from "./GlobeSection"
 
 const HeroSection = () => {
     return (
-        <div className="min-h-screen w-full flex snap-start">
+        <div className="min-h-screen w-full flex snap-center">
             <GlobeSection />
         </div>
     )
