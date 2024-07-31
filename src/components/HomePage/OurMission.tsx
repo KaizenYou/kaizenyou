@@ -1,17 +1,8 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 const OurMission = () => {
     return (
-        <div className="h-[40rem] snap-start flex flex-col antialiased bg-black bg-dot-white/[0.3] items-center justify-center relative overflow-hidden">
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-            <InfiniteMovingCards
-                items={content}
-                direction="right"
-                speed="slow"
-            />
+        <div className="h-[40rem]  flex flex-col antialiased items-center justify-center relative overflow-hidden">
+
         </div>
     );
 }
