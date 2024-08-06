@@ -1,0 +1,365 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "location": "New York",
+        "jobRole": "Software Engineer",
+        "experience": "5 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Tech Innovators Inc."
+    },
+    {
+        "id": 900,
+        "name": "John Doe",
+        "location": "New York",
+        "jobRole": "Software Engineer",
+        "experience": "5 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Global Tech Solutions"
+    },
+    {
+        "id": 55,
+        "name": "John Doe",
+        "location": "New York",
+        "jobRole": "Software Engineer",
+        "experience": "5 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Innovatech Ltd."
+    },
+    {
+        "id": 21,
+        "name": "william",
+        "location": "New York",
+        "jobRole": "Web Developer",
+        "experience": "5 years",
+        "skills": [
+            "FrontEnd",
+            "React",
+            "Node.js"
+        ],
+        "company": "Web Creators Co."
+    },
+    {
+        "id": 25,
+        "name": "Harris",
+        "location": "San Francisco",
+        "jobRole": "Data Analyst",
+        "experience": "4 years",
+        "skills": [
+            "SQL",
+            "Python",
+            "Data Visualization"
+        ],
+        "company": "Data Dynamics"
+    },
+    {
+        "id": 26,
+        "name": "Mona Lisa",
+        "location": "San Francisco",
+        "jobRole": "Web Developer",
+        "experience": "3 years",
+        "skills": [
+            "FrontEnd",
+            "React",
+            "Node.js"
+        ],
+        "company": "Creative Web Solutions"
+    },
+    {
+        "id": 22,
+        "name": "Rubeca",
+        "location": "New York",
+        "jobRole": "Data Analyst",
+        "experience": "5 years",
+        "skills": [
+            "SQL",
+            "Python",
+            "Data Visualization"
+        ],
+        "company": "Insight Analytics"
+    },
+    {
+        "id": 18,
+        "name": "Peter Parker",
+        "location": "New York",
+        "jobRole": "Software Engineer",
+        "experience": "5 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Tech Ventures"
+    },
+    {
+        "id": 17,
+        "name": "Stephen Strange",
+        "location": "New York",
+        "jobRole": "Software Engineer",
+        "experience": "5 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Advanced Solutions"
+    },
+    {
+        "id": 19,
+        "name": "Harilal Pandey",
+        "location": "India",
+        "jobRole": "Software Engineer",
+        "experience": "5 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Tech India Ltd."
+    },
+    {
+        "id": 20,
+        "name": "Martin Möller",
+        "location": "Chicago",
+        "jobRole": "Software Engineer",
+        "experience": "5 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Chicago Tech Group"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "location": "San Francisco",
+        "jobRole": "Product Manager",
+        "experience": "8 years",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "company": "Product Innovations"
+    },
+    {
+        "id": 3,
+        "name": "Harshit Singh",
+        "location": "India",
+        "jobRole": "Product Manager",
+        "experience": "7 years",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "company": "Global Product Solutions"
+    },
+    {
+        "id": 23,
+        "name": "Akanksha",
+        "location": "India",
+        "jobRole": "Data Analyst",
+        "experience": "7 years",
+        "skills": [
+            "SQL",
+            "Python",
+            "Data Visualization"
+        ],
+        "company": "Data Insights India"
+    },
+    {
+        "id": 4,
+        "name": "Kumari Aastha",
+        "location": "India",
+        "jobRole": "Web Developer",
+        "experience": "8 years",
+        "skills": [
+            "BackEnd",
+            "EndFront",
+            "ReacJs"
+        ],
+        "company": "EndTech Solutions"
+    },
+    {
+        "id": 5,
+        "name": "Aradhya Yadav",
+        "location": "India",
+        "jobRole": "Web Developer",
+        "experience": "No Experience",
+        "skills": [
+            "BackEnd",
+            "VueJs"
+        ],
+        "company": "VueTech Ltd."
+    },
+    {
+        "id": 6,
+        "name": "Neha",
+        "location": "India",
+        "jobRole": "Web Developer",
+        "experience": "2 years",
+        "skills": [
+            "BackEnd",
+            "EndFront",
+            "ReacJs"
+        ],
+        "company": "BackEnd Innovations"
+    },
+    {
+        "id": 7,
+        "name": "Jane Smith",
+        "location": "San Francisco",
+        "jobRole": "Product Manager",
+        "experience": "8 years",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "company": "Product Innovations"
+    },
+    {
+        "id": 8,
+        "name": "Ruby Maccain",
+        "location": "San Francisco",
+        "jobRole": "Software Engineer",
+        "experience": "8 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Tech Pioneers"
+    },
+    {
+        "id": 9,
+        "name": "Jane Smith",
+        "location": "San Francisco",
+        "jobRole": "Product Manager",
+        "experience": "8 years",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "company": "Product Innovations"
+    },
+    {
+        "id": 15,
+        "name": "Henry",
+        "location": "New York",
+        "jobRole": "Product Manager",
+        "experience": "3 years",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "company": "NYC Product Solutions"
+    },
+    {
+        "id": 16,
+        "name": "Shephard",
+        "location": "New York",
+        "jobRole": "Product Manager",
+        "experience": "7 years",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "company": "Advanced Product Solutions"
+    },
+    {
+        "id": 14,
+        "name": "Jane Smith",
+        "location": "Chicago",
+        "jobRole": "Product Manager",
+        "experience": "3 years",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "company": "Chicago Product Ventures"
+    },
+    {
+        "id": 24,
+        "name": "Ramen Wilson",
+        "location": "Chicago",
+        "jobRole": "Web Developer",
+        "experience": "10 years",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "company": "Web Dev Experts"
+    },
+    {
+        "id": 10,
+        "name": "Jane Smith",
+        "location": "Chicago",
+        "jobRole": "Product Manager",
+        "experience": "3 years",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "company": "Chicago Product Ventures"
+    },
+    {
+        "id": 11,
+        "name": "Marie Smith",
+        "location": "Chicago",
+        "jobRole": "Data Analyst",
+        "experience": "10 years",
+        "skills": [
+            "SQL",
+            "Python",
+            "Data Visualization"
+        ],
+        "company": "Data Analysts Ltd."
+    },
+    {
+        "id": 12,
+        "name": "Bob Johnson",
+        "location": "Chicago",
+        "jobRole": "Data Analyst",
+        "experience": "3 years",
+        "skills": [
+            "SQL",
+            "Python",
+            "Data Visualization"
+        ],
+        "company": "Data Analysts Ltd."
+    },
+    {
+        "id": 13,
+        "name": "Sunny Hanshaw",
+        "location": "Chicago",
+        "jobRole": "Data Analyst",
+        "experience": "1 years",
+        "skills": [
+            "SQL",
+            "Python",
+            "Data Visualization"
+        ],
+        "company": "Data Insights Chicago"
+    }
+]

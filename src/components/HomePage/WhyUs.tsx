@@ -40,7 +40,7 @@ const WhyUs = () => {
     return (
         <div className="min-h-[90vh] w-full flex flex-col items-center justify-center bg-black bg-grid-white/[0.2] snap-start relative">
             <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-            <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 pb-4 bg-clip-text text-center text-5xl font-medium tracking-tight text-transparent md:text-7xl mt-6">
+            <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 pb-4 bg-clip-text text-center text-5xl font-medium tracking-tight text-transparent md:text-7xl mt-6 z-50">
                 Why Choose Us?
             </h1>
             <div className=" w-[80%] grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-6">

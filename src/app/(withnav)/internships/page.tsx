@@ -1,10 +1,9 @@
+import CandidateSearch from "@/components/CandidateSearch"
 
 const IntershipPage = () => {
     return (
 
-        <div>
-            Hi
-        </div>
+        <CandidateSearch />
     )
 }
 
