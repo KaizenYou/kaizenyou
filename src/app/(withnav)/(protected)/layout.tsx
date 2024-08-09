@@ -1,29 +1,27 @@
+// src/app/(protected)/ProtectedLayout.tsx
+
 'use client'
 
-import { useSession } from "next-auth/react"
-import { useRouter } from "next/navigation"
-import { useEffect } from "react"
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const ProtectedLayout = ({ children }: { children: React.ReactNode }) => {
-    const { data: session, status } = useSession()
-    const router = useRouter()
+    const { data: session, status } = useSession();
+    const router = useRouter();
 
     useEffect(() => {
-        if (status === "loading") return
+        if (status === "loading") return;
         if (!session) {
-            router.push('/login')
+            router.push('/login');
         }
-    }, [session, status, router])
+    }, [session, status, router]);
 
     if (status === "loading" || !session) {
-        return <div>Loading...</div>
+        return <div>Loading...</div>;
     }
 
-    return (
-        <>
-            {children}
-        </>
-    )
-}
+    return <>{children}</>;
+};
 
-export default ProtectedLayout
+export default ProtectedLayout;

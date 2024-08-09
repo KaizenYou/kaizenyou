@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Button from '@/components/ui/Button';
 import { IconBrandGoogle } from '@tabler/icons-react';
+import Link from 'next/link';
 
 const Login = () => {
     const [loading, setLoading] = useState(false);
@@ -17,16 +18,17 @@ const Login = () => {
 
             toast.success('Login successful!', {
                 position: "bottom-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
+                className: 'toast-success',
             });
         } catch (error) {
             toast.error('Login failed. Please try again.', {
                 position: "bottom-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -38,7 +40,7 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen w-full flex items-center">
+        <div className="min-h-screen w-full flex flex-col justify-center items-center">
             <div className="max-w-md w-[90%] mx-auto rounded-2xl px-3 py-14 shadow-input bg-white dark:bg-black ring-1 ring-gray-100">
                 <div className="mx-auto w-fit text-center">
                     <h2 className="font-extrabold text-3xl tracking-tight bg-gradient-to-br from-slate-200 to-slate-500 bg-clip-text text-transparent">
@@ -64,6 +66,7 @@ const Login = () => {
                     </Button>
                 </div>
             </div>
+            <p className='my-4'>Go to <Link href='/' className='text-blue-500 '>Home</Link></p>
             <ToastContainer />
         </div>
     );

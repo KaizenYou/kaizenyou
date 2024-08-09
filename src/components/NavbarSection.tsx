@@ -26,7 +26,7 @@ const NavbarSection = ({ className }: { className?: string }) => {
             await signOut({ redirect: false }); // prevent automatic redirect
             toast.success("Successfully logged out!", {
                 position: "bottom-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -35,7 +35,7 @@ const NavbarSection = ({ className }: { className?: string }) => {
         } catch (error) {
             toast.error("Logout failed. Please try again.", {
                 position: "bottom-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,

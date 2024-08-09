@@ -1,12 +1,10 @@
-'use client'
+'use client';
 
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import LazyLoad from 'react-lazyload';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +30,39 @@ const DetailSection = () => {
             }
         });
 
+        imageRefs.current.forEach((ref) => {
+            if (ref) {
+                const handleMouseMove = (event: MouseEvent) => {
+                    const { clientX, clientY, currentTarget } = event;
+                    const { left, top, width, height } = (currentTarget as HTMLElement).getBoundingClientRect();
+                    const x = (clientX - left) / width;
+                    const y = (clientY - top) / height;
+
+                    gsap.to(ref, {
+                        rotationX: (y - 0.5) * 30, // X-axis rotation
+                        rotationY: (x - 0.5) * -30, // Y-axis rotation
+                        transformPerspective: 500, // Depth perspective
+                        ease: 'power1.out',
+                    });
+                };
+
+                const resetRotation = () => {
+                    gsap.to(ref, {
+                        rotationX: 0,
+                        rotationY: 0,
+                        ease: 'power1.out',
+                    });
+                };
+
+                ref.addEventListener('mousemove', handleMouseMove);
+                ref.addEventListener('mouseleave', resetRotation);
+
+                return () => {
+                    ref.removeEventListener('mousemove', handleMouseMove);
+                    ref.removeEventListener('mouseleave', resetRotation);
+                };
+            }
+        });
 
     }, []);
 
@@ -39,28 +70,23 @@ const DetailSection = () => {
         contentRefs.current[index] = el;
     };
 
+    const setImageRef = (index: number) => (el: HTMLDivElement | null) => {
+        imageRefs.current[index] = el;
+    };
 
     return (
         <div className="w-full">
             <div className="w-full flex-col md:flex-row flex min-h-screen">
                 <div className="md:w-[50%] w-full flex items-center justify-center relative">
-                    <LazyLoad height={400} offset={100} once>
-                        <motion.div initial={{ opacity: 0, y: 300 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                delay: 0.3,
-                                duration: 0.8,
-                                ease: "easeOut",
-                            }} className="relative w-full h-full">
-                            <Image
-                                src='/workshop.png'
-                                alt="workshop"
-                                width={400}
-                                height={400}
-                                className="object-cover w-full h-full"
-                            />
-                        </motion.div>
-                    </LazyLoad>
+                    <div ref={setImageRef(0)} className="relative w-full h-full flex items-center justify-center">
+                        <Image
+                            src='/workshop.png'
+                            alt="workshop"
+                            width={500}
+                            height={500}
+                            className="transform-gpu"
+                        />
+                    </div>
                 </div>
                 <div className="md:w-[50%] w-full flex items-center">
                     <div ref={setContentRef(0)} className="sm:w-[60%] w-full mx-auto">
@@ -72,27 +98,18 @@ const DetailSection = () => {
                         </p>
                     </div>
                 </div>
-            </div >
+            </div>
             <div className="w-full flex flex-col min-h-screen md:flex-row-reverse">
                 <div className="md:w-[50%] w-full flex h-screen items-center justify-center relative">
-                    <LazyLoad height={600} offset={100} once>
-                        <motion.div initial={{ opacity: 0, y: 300 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-
-                            transition={{
-                                delay: 0.3,
-                                duration: 0.8,
-                                ease: "easeOut",
-                            }} className="relative w-full h-full">
-                            <Image
-                                src='/leader.png'
-                                alt="leader"
-                                width={400}
-                                height={400}
-                                className="object-cover w-full h-full"
-                            />
-                        </motion.div>
-                    </LazyLoad>
+                    <div ref={setImageRef(1)} className="relative w-full h-full flex items-center justify-center">
+                        <Image
+                            src='/leader.png'
+                            alt="leader"
+                            width={500}
+                            height={500}
+                            className="transform-gpu"
+                        />
+                    </div>
                 </div>
                 <div className="md:w-[50%] w-full flex items-center">
                     <div ref={setContentRef(1)} className="sm:w-[60%] w-full mx-auto">
@@ -105,8 +122,8 @@ const DetailSection = () => {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
-}
+};
 
 export default DetailSection;
