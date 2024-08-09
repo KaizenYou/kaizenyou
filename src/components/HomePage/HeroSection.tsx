@@ -15,7 +15,7 @@ const HeroSection = () => {
                     <h1 className=" text-5xl md:text-6xl font-bold  bg-gradient-to-br from-slate-200 to-slate-500 bg-clip-text text-transparent w-full tracking-tight">Get the <span className="text-blue-500 block md:text-7xl">Competitive Edge</span></h1>
                     <p className="text-neutral-500 text-md sm:text-base mt-5 w-full">Learn In-Demand Commerce & Management Skills with KaizenYou</p>
                     <div className="flex flex-row space-y-0 space-x-4 mt-7 sm:w-full">
-                        <Link href={'/login'}>
+                        <Link href={'/dashboard'}>
                             <Button title="Get Started" className="px-5" />
                         </Link>
                         <a href='#about'>

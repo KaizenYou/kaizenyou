@@ -42,7 +42,7 @@ const faqData: FAQItem[] = [
     }
 ];
 
-const FAQ: React.FC = () => {
+const FaqSection: React.FC = () => {
     const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
     const toggleAnswer = (index: number) => {
@@ -63,7 +63,7 @@ const FAQ: React.FC = () => {
                         onClick={() => toggleAnswer(index)}
                     >
                         <div
-                            className={`p-3 text-lg font-semibold text-white flex justify-between ${activeQuestion === index ? 'text-blue-500' : ''
+                            className={`p-3 text-lg font-semibold hover:text-blue-500 flex justify-between ${activeQuestion === index ? 'text-blue-500' : 'text-white'
                                 }`}
                         >
                             <span>{item.question}</span>
@@ -84,4 +84,4 @@ const FAQ: React.FC = () => {
     );
 };
 
-export default FAQ;
+export default FaqSection;

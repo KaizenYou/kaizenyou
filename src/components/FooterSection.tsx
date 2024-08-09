@@ -31,7 +31,7 @@ const social = [
 
 
 
-const Footer = () => {
+const FooterSection = () => {
     return (
         <div className="w-full flex flex-col justify-center items-center" >
             <div className="w-[80%] flex justify-center items-center px-[7px] border-b-[1px] border-neutral-600 py-[20px]" >
@@ -51,4 +51,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default FooterSection

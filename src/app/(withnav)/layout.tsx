@@ -1,17 +1,21 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+'use client'
+import { SessionProvider } from "next-auth/react"
+import FooterSection from "@/components/FooterSection";
+import NavbarSection from "@/components/NavbarSection";
 
 const HomeLayout = ({
     children,
-}: Readonly<{
+    session
+}: {
     children: React.ReactNode;
-}>) => {
+    session: any;
+}) => {
     return (
-        <>
-            <Navbar />
+        <SessionProvider session={session}>
+            <NavbarSection />
             {children}
-            <Footer />
-        </>
+            <FooterSection />
+        </SessionProvider>
     )
 }
 

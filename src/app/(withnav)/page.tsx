@@ -1,13 +1,14 @@
+
 import AboutSection from "@/components/HomePage/AboutSection";
 import DetailSection from "@/components/HomePage/DetailSection";
-import FAQ from "@/components/HomePage/FaqSection";
+import FaqSection from "@/components/HomePage/FaqSection";
 import HeroSection from "@/components/HomePage/HeroSection";
-import OurMission from "@/components/HomePage/OurMission";
 import WhoSlider from "@/components/HomePage/WhoSlider";
 import WhyUs from "@/components/HomePage/WhyUs";
 
 
 export default function Home() {
+
   return (
     <>
       <HeroSection />
@@ -15,7 +16,7 @@ export default function Home() {
       <AboutSection />
       <DetailSection />
       <WhyUs />
-      <FAQ />
+      <FaqSection />
     </>
   );
 }

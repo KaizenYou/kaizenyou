@@ -67,7 +67,7 @@ const CandidateSearch: React.FC = () => {
                         <select
                             id="location"
                             {...register('location')}
-                            className="w-full p-2 border border-gray-300 rounded-md text-black"
+                            className="w-full p-3 border  bg-slate-950 bg-gradient-to-br from-slate-700 text-customGray backdrop-blur-3xl border-none outline-none"
                         >
                             <option value="">Select location</option>
                             {Array.from(new Set(candidatesData.map((candidate: Candidate) => candidate.location))).map((location) => (
@@ -79,11 +79,11 @@ const CandidateSearch: React.FC = () => {
                         {errors.location && <p className="text-red-500">{errors.location.message}</p>}
                     </div>
                     <div className='w-full'>
-                        <label htmlFor="jobRole" className="block font-semibold  mb-1">Job Role</label>
+                        <label htmlFor="jobRole" className="block font-semibold ml-1 text-customGray mb-1">Job Role</label>
                         <select
                             id="jobRole"
                             {...register('jobRole')}
-                            className="w-full p-2 border border-gray-300 rounded-md text-black"
+                            className="w-full p-3 border  bg-slate-950 bg-gradient-to-br from-slate-700 text-customGray backdrop-blur-3xl border-none outline-none mb-4"
                         >
                             <option value="">Select job role</option>
                             {Array.from(new Set(candidatesData.map((candidate: Candidate) => candidate.jobRole))).map((jobRole) => (
@@ -104,11 +104,11 @@ const CandidateSearch: React.FC = () => {
             {filteredCandidates.length > 0 && (
                 <div className="mt-14">
                     <h2 className="text-3xl text-blue-500 mb-9 font-bold text-center uppercase">Opportunities</h2>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                         {filteredCandidates.map((candidate) => (
                             <li key={candidate.id} className="p-4 rounded-md shadow-md bg-black flex flex-col justify-center min-h-[400px] border hover:shadow-white">
-                                <div className='flex flex-col mb-4'>
-                                    <div className="mb-2 text-center">
+                                <div className='flex flex-col mb-4 text-left'>
+                                    <div className="mb-2 text-center w-full">
                                         <strong className='text-blue-500 text-xl '>Position</strong> <br /> {candidate.jobRole}
                                     </div>
                                     <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent m-3 h-[1px] w-full" />
