@@ -13,6 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/kaizenyou.png" type="image/png" />
+      </head>
       <body className={inter.className}>
         <ClientSessionProvider>
           <SmoothScroll>{children}</SmoothScroll>
