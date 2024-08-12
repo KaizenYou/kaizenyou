@@ -32,7 +32,7 @@ const validationSchema = Yup.object().shape({
 const CandidateSearch: React.FC = () => {
     const [filteredCandidates, setFilteredCandidates] = useState<Candidate[]>([]);
     const [candidatesData, setCandidatesData] = useState<Candidate[]>([]);
-    const [loading, setLoading] = useState(true); // Add loading state
+    const [loading, setLoading] = useState(true);
 
     const {
         register,

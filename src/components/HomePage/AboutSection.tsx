@@ -27,7 +27,7 @@ const AboutSection = () => {
             });
         }
 
-        // Check if the screen width is larger than a certain threshold (e.g., 768px)
+
         if (cursor && window.innerWidth > 768) {
             const onMouseMove = (e: MouseEvent) => {
                 gsap.to(cursor, {

@@ -18,13 +18,13 @@ const DetailSection = () => {
                 gsap.from(ref, {
                     opacity: 0,
                     y: 100,
-                    duration: 1,
+                    duration: 0.8,
                     ease: 'power4.out',
                     scrollTrigger: {
                         trigger: ref,
                         start: 'top 80%',
                         end: 'bottom 20%',
-                        scrub: 1,
+                        scrub: 0.5,
                     },
                 });
             }
@@ -39,9 +39,9 @@ const DetailSection = () => {
                     const y = (clientY - top) / height;
 
                     gsap.to(ref, {
-                        rotationX: (y - 0.5) * 30, // X-axis rotation
-                        rotationY: (x - 0.5) * -30, // Y-axis rotation
-                        transformPerspective: 500, // Depth perspective
+                        rotationX: (y - 0.5) * 30,
+                        rotationY: (x - 0.5) * -30,
+                        transformPerspective: 500,
                         ease: 'power1.out',
                     });
                 };
@@ -76,19 +76,19 @@ const DetailSection = () => {
 
     return (
         <div className="w-full">
-            <div className="w-full flex-col md:flex-row flex min-h-screen">
+            <div className="w-full flex flex-col md:flex-row  min-h-screen">
                 <div className="md:w-[50%] w-full flex items-center justify-center relative">
                     <div ref={setImageRef(0)} className="relative w-full h-full flex items-center justify-center">
                         <Image
                             src='/workshop.png'
                             alt="workshop"
-                            width={500}
-                            height={500}
+                            width={450}
+                            height={450}
                             className="transform-gpu"
                         />
                     </div>
                 </div>
-                <div className="md:w-[50%] w-full flex items-center">
+                <div className="md:w-[50%] w-full flex items-center justify-center">
                     <div ref={setContentRef(0)} className="sm:w-[60%] w-full mx-auto">
                         <p className="md:text-3xl text-2xl font-semibold tracking-tight leading-relaxed text-blue-500 w-[95%] mx-auto my-2 text-left z-20">
                             <span className="text-5xl font-bold">W</span>e go beyond traditional learning by offering dynamic training sessions and workshops.
@@ -100,18 +100,18 @@ const DetailSection = () => {
                 </div>
             </div>
             <div className="w-full flex flex-col min-h-screen md:flex-row-reverse">
-                <div className="md:w-[50%] w-full flex h-screen items-center justify-center relative">
+                <div className="md:w-[50%] w-full flex items-center justify-center relative">
                     <div ref={setImageRef(1)} className="relative w-full h-full flex items-center justify-center">
                         <Image
                             src='/leader.png'
                             alt="leader"
-                            width={500}
-                            height={500}
+                            width={450}
+                            height={450}
                             className="transform-gpu"
                         />
                     </div>
                 </div>
-                <div className="md:w-[50%] w-full flex items-center">
+                <div className="md:w-[50%] w-full flex items-center justify-center ">
                     <div ref={setContentRef(1)} className="sm:w-[60%] w-full mx-auto">
                         <p className="md:text-3xl text-2xl font-semibold tracking-tight leading-relaxed text-blue-500 w-[95%] mx-auto my-2 text-left z-20">
                             <span className="text-5xl font-bold">E</span>xclusive opportunities for both paid and unpaid internships.
