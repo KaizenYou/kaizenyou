@@ -27,7 +27,8 @@ const AboutSection = () => {
             });
         }
 
-        if (cursor) {
+        // Check if the screen width is larger than a certain threshold (e.g., 768px)
+        if (cursor && window.innerWidth > 768) {
             const onMouseMove = (e: MouseEvent) => {
                 gsap.to(cursor, {
                     x: e.clientX,
@@ -68,7 +69,7 @@ const AboutSection = () => {
         <div id="about" className="min-h-screen w-full flex items-center justify-center antialiased bg-black relative overflow-hidden">
             <div
                 ref={cursorRef}
-                className="fixed top-0 left-0 w-10 h-10 rounded-full bg-blue-500 z-50 pointer-events-none"
+                className="fixed top-0 left-0 w-10 h-10 rounded-full bg-blue-500 z-50 pointer-events-none hidden md:block"
                 style={{ mixBlendMode: 'difference', transform: 'translate(-50%, -50%)' }}
             ></div>
 
