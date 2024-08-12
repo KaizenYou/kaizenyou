@@ -10,13 +10,13 @@ import WhyUs from "@/components/HomePage/WhyUs";
 export default function Home() {
 
   return (
-    <>
+    <div id="home">
       <HeroSection />
       <WhoSlider />
       <AboutSection />
       <DetailSection />
       <WhyUs />
       <FaqSection />
-    </>
+    </div>
   );
 }

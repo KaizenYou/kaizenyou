@@ -13,7 +13,6 @@ interface Candidate {
     id: string;
     location: string;
     jobRole: string;
-    experience: string;
     skills: string[];
     company: string;
     applyUrl?: string;
@@ -139,9 +138,9 @@ const CandidateSearch: React.FC = () => {
                                         <strong className='text-blue-500 text-xl '>Position</strong> <br /> {candidate.jobRole}
                                     </div>
                                     <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent m-3 h-[1px] w-full" />
-                                    <strong className='text-customGray' >Experience</strong> {candidate.experience}
                                     <strong className='text-customGray'>Organisation</strong> {candidate.company}
                                     <strong className='text-customGray'>Stipend</strong> {candidate.stipend}
+                                    <strong className='text-customGray'>Location</strong> {candidate.location}
                                     <strong className='text-customGray'>Skills Required</strong> {candidate.skills.join(', ')}
                                 </div>
                                 {candidate.applyUrl ? (

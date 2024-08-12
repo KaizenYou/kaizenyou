@@ -43,7 +43,7 @@ const WhyUs = () => {
             <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 pb-4 bg-clip-text text-center text-5xl font-medium tracking-tight text-transparent md:text-7xl mt-14 z-50">
                 Why Choose Us?
             </h1>
-            <div className=" w-[80%] grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-6">
+            <div className=" w-[80%] grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-6 ">
                 {features.map((feature) => (
                     <div key={feature.name}>
                         <PinContainer title={feature.description}>

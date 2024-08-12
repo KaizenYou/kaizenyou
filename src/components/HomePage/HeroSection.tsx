@@ -57,7 +57,7 @@ const HeroSection = () => {
                         Get the <span className="text-blue-500 block md:text-7xl">Competitive Edge</span>
                     </h1>
                     <p className="text-neutral-500 text-md sm:text-base mt-5 w-full">
-                        Learn In-Demand Commerce & Management Skills with KaizenYou
+                        Learn In-Demand Management Skills with KaizenYou
                     </p>
                     <div className="flex flex-row space-y-0 space-x-4 mt-7 sm:w-full">
                         <Link href={'/dashboard'}>

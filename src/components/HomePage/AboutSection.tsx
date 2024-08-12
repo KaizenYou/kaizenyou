@@ -1,19 +1,19 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
-    const rippleRef = useRef<HTMLDivElement | null>(null);
+    const cursorRef = useRef<HTMLDivElement | null>(null);
 
     useGSAP(() => {
         const videoElement = videoRef.current;
-        const rippleElement = rippleRef.current;
+        const cursor = cursorRef.current;
 
         if (videoElement) {
             ScrollTrigger.create({
@@ -27,55 +27,51 @@ const AboutSection = () => {
             });
         }
 
-        if (rippleElement) {
-            const handleMouseMove = (event: MouseEvent) => {
-                const { clientX, clientY } = event;
-
-                // Set ripple position and style
-                gsap.to(rippleElement, {
-                    left: clientX - rippleElement.clientWidth / 2,
-                    top: clientY - rippleElement.clientHeight / 2,
-                    opacity: 0.8,
-                    scale: 1.2,
-                    duration: 0.1,
-                    ease: 'power2.out',
-                    transformOrigin: 'center center'
-                });
-
-                // Ripple effect
-                gsap.to(rippleElement, {
-                    opacity: 0,
-                    scale: 2,
-                    duration: 0.6,
-                    ease: 'power2.out',
-                    delay: 0.1,
+        if (cursor) {
+            const onMouseMove = (e: MouseEvent) => {
+                gsap.to(cursor, {
+                    x: e.clientX,
+                    y: e.clientY,
+                    duration: 0.3,
+                    ease: 'power3.out',
                 });
             };
 
-            // Hide default cursor and show ripple element
-            const handleMouseEnter = () => {
-                document.body.style.cursor = 'none'; // Hide default cursor
+            const onMouseOverText = () => {
+                gsap.to(cursor, { scale: 2, duration: 0.3, ease: 'power3.out' });
             };
 
-            const handleMouseLeave = () => {
-                document.body.style.cursor = ''; // Show default cursor
+            const onMouseOutText = () => {
+                gsap.to(cursor, { scale: 1, duration: 0.3, ease: 'power3.out' });
             };
 
-            // Add event listeners
-            window.addEventListener('mousemove', handleMouseMove);
-            window.addEventListener('mouseenter', handleMouseEnter);
-            window.addEventListener('mouseleave', handleMouseLeave);
+            window.addEventListener('mousemove', onMouseMove);
+
+            const textElements = document.querySelectorAll('p, h1');
+            textElements.forEach((text) => {
+                text.addEventListener('mouseover', onMouseOverText);
+                text.addEventListener('mouseout', onMouseOutText);
+            });
 
             return () => {
-                window.removeEventListener('mousemove', handleMouseMove);
-                window.removeEventListener('mouseenter', handleMouseEnter);
-                window.removeEventListener('mouseleave', handleMouseLeave);
+                window.removeEventListener('mousemove', onMouseMove);
+
+                textElements.forEach((text) => {
+                    text.removeEventListener('mouseover', onMouseOverText);
+                    text.removeEventListener('mouseout', onMouseOutText);
+                });
             };
         }
     }, []);
 
     return (
         <div id="about" className="min-h-screen w-full flex items-center justify-center antialiased bg-black relative overflow-hidden">
+            <div
+                ref={cursorRef}
+                className="fixed top-0 left-0 w-10 h-10 rounded-full bg-blue-500 z-50 pointer-events-none"
+                style={{ mixBlendMode: 'difference', transform: 'translate(-50%, -50%)' }}
+            ></div>
+
             <video
                 ref={videoRef}
                 preload="none"
@@ -99,11 +95,6 @@ const AboutSection = () => {
                     </p>
                 </div>
             </div>
-            <div
-                ref={rippleRef}
-                className="pointer-events-none absolute w-20 h-20 rounded-full bg-customGray opacity-0 z-30"
-                style={{ transform: 'translate(-50%, -50%)', mixBlendMode: 'screen' }}
-            ></div>
         </div>
     );
 };
